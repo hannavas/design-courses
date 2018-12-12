@@ -14,12 +14,12 @@ a {
     text-decoration: none;
 }
 
-/* .Hero {
+.Hero {
     height: 920px;
-    background: url('../images/wallpaper3.jpg');
-    background-size: cover;
-    background-position: center;
-} */
+    background-color: #f9f9f9;
+    /* background-size: cover;
+    background-position: center; */
+}
 
 .HeroGroup {
     max-width: 500px;
@@ -42,8 +42,8 @@ a {
 }
 
 .Hero p {
-    font-size: 30px;
-    line-height: 1.5;
+    font-size: 24px;
+    line-height: 1.4;
     color: black;
     animation: HeroAnimation 1.5s 0.2s forwards cubic-bezier(0.2, 0.8, 0.2, 1);
     opacity: 0;
