@@ -7,7 +7,21 @@ const IndexPage = () => (
             <div className="HeroGroup">
                 <h1>Design School</h1>
                 <p>Peruse syllabi from design courses <br />at colleges around the world.</p>
-                <svg width="100%" height="172" viewBox="0 0 100% 172" fill="none">
+                <div className="Logos">
+                    <img src={require('../images/logo-sketch.png')}
+                    width="50" />
+                    <img src={require('../images/logo-figma.png')}
+                    width="50" />
+                    <img src={require('../images/logo-studio.png')}
+                    width="50" />
+                    <img src={require('../images/logo-framer.png')}
+                    width="50" />
+                    <img src={require('../images/logo-react.png')}
+                    width="50" />
+                    <img src={require('../images/logo-swift.png')}
+                    width="50" />
+                </div>
+                <svg width="100%" height="172" fill="none">
                     <path fill="white">
                         <animate
                         repeatCount="indefinite"
