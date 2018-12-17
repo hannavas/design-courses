@@ -15,10 +15,11 @@ a {
 }
 
 .Hero {
-    height: 920px;
-    background-color: #f9f9f9;
+    height: 960px;
+    background-color: #ececec;
     /* background-size: cover;
     background-position: center; */
+    position: relative;
 }
 
 .HeroGroup {
@@ -81,4 +82,10 @@ a {
         opacity: 1;
         transform: translateY(0px);
     }
+}
+
+.Hero svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
