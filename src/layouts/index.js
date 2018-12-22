@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
+import Footer from '../components/Footer'
 import './index.css'
 
 const Layout = ({children, data}) => (
@@ -10,14 +11,17 @@ const Layout = ({children, data}) => (
         <Helmet title={data.site.siteMetadata.title} meta={[
             {
                 name: 'description',
-                content: 'Sample'
+                content: data.site.siteMetadata. description
             }, {
                 name: 'keywords',
-                content: 'sample, something'
+                content: data.site.siteMetadata.keywords
             }
         ]}/>
         <Header />
         {children()}
+        <Footer data={data}>
+            Copyright lorem ipsum. <a href="mailto:alsosavannah@gmail.com">Email us</a>.
+        </Footer>
     </div>
 )
 
@@ -28,11 +32,22 @@ Layout.propTypes = {
 export default Layout
 
 export const query = graphql `
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
+    query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
+            description
+            keywords
+          }
+        }
+        allContentfulLink(sort: { fields: [createdAt], order: ASC }) {
+            edges {
+                node {
+                    title
+                    url
+                    createdAt
+                }
+            }
+        }
     }
-  }
 `
